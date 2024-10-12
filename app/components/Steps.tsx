@@ -3,23 +3,23 @@ import React from 'react';
 const Steps: React.FC = () => {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-1 mx-auto">
         <Feature
-          title="Shooting Stars"
-          description="Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine."
+          title="Analyze First!"
+          description="Before making decisions, take time to analyze our services and offerings. Understanding our strengths ensures you make informed choices."
           iconPath="M22 12h-4l-3 9L9 3l-3 9H2"
           reverseOrder={false}
         />
         <Feature
-          title="The Catalyzer"
-          description="Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine."
-          iconPath="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"
+          title="Let it Go!"
+          description="Once you've analyzed our offerings and feel confident in your decision, take the next step! Engage with us, explore our services, and experience the benefits firsthand."
+          iconPath="M5 12h14M12 5l7 7-7 7"
           reverseOrder={true}
         />
         <Feature
-          title="The 400 Blows"
-          description="Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine."
-          iconPath="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"
+          title="Refer Your Buddies Too!"
+          description="Refer a friend and unlock rewards! Share the benefits of our service with someone you care about and enjoy together."
+          iconPath="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-10 1.67-10 5v2h20v-2c0-3.33-6.69-5-10-5z"
           reverseOrder={false}
         />
         <Button />
@@ -44,12 +44,6 @@ const Feature: React.FC<{
       <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
         <h2 className="text-gray-900 text-lg title-font font-medium mb-2">{title}</h2>
         <p className="leading-relaxed text-base">{description}</p>
-        <a className="mt-3 text-indigo-500 inline-flex items-center">
-          Learn More
-          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </a>
       </div>
     </div>
   );
@@ -57,9 +51,12 @@ const Feature: React.FC<{
 
 const Button: React.FC = () => {
   return (
-    <button className="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-      Button
+    <a href='/price'>
+      <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+      Go & Boom!
     </button>
+    </a>
+    
   );
 };
 
