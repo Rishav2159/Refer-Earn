@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -32,20 +32,20 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="text-gray-600 body-font relative bg-white dark:bg-gray-900">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            If facing any issue, You are Welcomed to share with us.
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 dark:text-white">Contact Us</h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700 dark:text-gray-300">
+            If facing any issue, you are welcomed to share with us.
             Write your query/issue properly.
           </p>
         </div>
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
           <form onSubmit={handleSubmit} className="flex flex-wrap -m-2">
-            <div className="p-2 w-1/2">
+            <div className="p-2 w-full md:w-1/2">
               <div className="relative">
-                <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
+                <label htmlFor="name" className="leading-7 text-sm text-gray-600 dark:text-gray-300">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -57,9 +57,9 @@ const ContactUs: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="p-2 w-1/2">
+            <div className="p-2 w-full md:w-1/2">
               <div className="relative">
-                <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
+                <label htmlFor="email" className="leading-7 text-sm text-gray-600 dark:text-gray-300">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -73,7 +73,7 @@ const ContactUs: React.FC = () => {
             </div>
             <div className="p-2 w-full">
               <div className="relative">
-                <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
+                <label htmlFor="message" className="leading-7 text-sm text-gray-600 dark:text-gray-300">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -85,7 +85,11 @@ const ContactUs: React.FC = () => {
               </div>
             </div>
             <div className="p-2 w-full">
-              <button type="submit" className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send Message</button>
+              <button type="submit" 
+                      aria-label="Send Message" 
+                      className="flex mx-auto text-white bg-indigo-500 border border-transparent py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg transition duration-300">
+                Send Message
+              </button>
             </div>
             {isSent && (
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
@@ -93,12 +97,13 @@ const ContactUs: React.FC = () => {
               </div>
             )}
             {error && (
-              <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <p className="text-red-500">{error}</p>
+              <div className="p2 w-full pt8 mt8 border-t border-gray200 text-center">
+                <p className="text-red500">{error}</p>
               </div>
             )}
-            <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-              <a href={`mailto:tech.referearn@gmail.com`} className="text-indigo-500">tech.referearn@gmail.com</a>
+            <div className="p2 w-full pt8 mt8 border-t border-gray200 text-center">
+              <a href={`mailto:tech.referearn@gmail.com`} 
+                 className="text-indigo500">tech.referearn@gmail.com</a>
             </div>
           </form>
         </div>

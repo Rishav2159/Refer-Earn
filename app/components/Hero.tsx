@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section className="text-gray-600 body-font bg-gray-50 relative overflow-hidden">
+    <section className="text-gray-600 body-font bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
       <div className="container mx-auto flex flex-col items-center justify-center px-5 py-8">
         {/* Animated Gradient Text with Reduced Margin */}
         <motion.h1 
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
         <div className="text-center lg:w-2/3 w-full mt-32">
           <motion.h1
-            className="title-font sm:text-5xl text-4xl mb-6 font-bold text-gray-900 leading-tight"
+            className="title-font sm:text-5xl text-4xl mb-6 font-bold text-gray-900 dark:text-white leading-tight"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           </motion.h1>
 
           <motion.p
-            className="mb-8 leading-relaxed text-lg text-gray-700"
+            className="mb-8 leading-relaxed text-lg text-gray-700 dark:text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           <div className="flex justify-center">
             <a href="/profile">
               <motion.button
-                className="inline-flex items-center text-white bg-indigo-500 border-0 py-3 px-8 focus:outline-none hover:bg-indigo-600 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center text-white bg-indigo-600 border-0 py-3 px-8 focus:outline-none hover:bg-indigo-700 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

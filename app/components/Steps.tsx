@@ -2,8 +2,8 @@ import React from 'react';
 
 const Steps: React.FC = () => {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-5 py-1 mx-auto">
+    <section className="text-gray-600 body-font bg-gray-50 dark:bg-gray-800">
+      <div className="container px-5 py-10 mx-auto">
         <Feature
           title="Analyze First!"
           description="Before making decisions, take time to analyze our services and offerings. Understanding our strengths ensures you make informed choices."
@@ -35,15 +35,15 @@ const Feature: React.FC<{
   reverseOrder: boolean;
 }> = ({ title, description, iconPath, reverseOrder }) => {
   return (
-    <div className={`flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col ${reverseOrder ? 'sm:flex-row-reverse' : ''}`}>
-      <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+    <div className={`flex items-center lg:w-3/5 mx-auto border-b pb-10 pt-10 border-gray-200 dark:border-gray-700 sm:flex-row flex-col ${reverseOrder ? 'sm:flex-row-reverse' : ''}`}>
+      <div className="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 dark:bg-indigo-700 text-indigo-500 dark:text-indigo-200 flex-shrink-0">
         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
           <path d={iconPath}></path>
         </svg>
       </div>
-      <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
-        <h2 className="text-gray-900 text-lg title-font font-medium mb-2">{title}</h2>
-        <p className="leading-relaxed text-base">{description}</p>
+      <div className="flex-grow sm:text-left text-center mt-10 sm:mt-0">
+        <h2 className="text-gray-900 dark:text-white text-lg title-font font-medium mb-2">{title}</h2>
+        <p className="leading-relaxed text-base text-gray-700 dark:text-gray-300">{description}</p>
       </div>
     </div>
   );
@@ -52,11 +52,10 @@ const Feature: React.FC<{
 const Button: React.FC = () => {
   return (
     <a href='/price'>
-      <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-      Go & Boom!
-    </button>
+      <button className="flex mx-auto text-white bg-indigo-500 border mt-10 border-transparent py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg transition duration-300 ease-in-out transform hover:scale-105">
+        Go & Boom!
+      </button>
     </a>
-    
   );
 };
 

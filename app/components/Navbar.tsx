@@ -19,13 +19,14 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex flex-wrap p-3 md:p-5 items-center">
         {/* Mobile Menu Button */}
         <button 
           className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-900 mr-3"
           onClick={toggleMenu}
           aria-label="Toggle Navigation"
+          aria-expanded={isOpen} // Accessibility improvement
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -39,11 +40,11 @@ const Navbar = () => {
             width={40}
             className="mr-6" // Adjust height as needed
           />
-          <span className="text-3xl font-serif">Refer Earn</span>
+          <span className="text-3xl font-serif text-gray-900 dark:text-white">Refer Earn</span>
         </div>
 
         {/* Title Section (visible on small screens) */}
-        <span className="text-xl font-serif flex-grow text-left md:hidden">Refer Earn</span>
+        <span className="text-xl font-serif flex-grow text-left md:hidden text-gray-900 dark:text-white">Refer Earn</span>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex md:ml-auto items-start justify-start text-lg">
@@ -51,7 +52,7 @@ const Navbar = () => {
             <a 
               key={label} 
               href={href} 
-              className="flex items-center mr-5 mb-4 md:mb-0 text-gray-700 transition duration-200 hover:text-blue-500 rounded p-2"
+              className="flex items-center mr-5 mb-4 md:mb-0 text-gray-700 dark:text-gray-300 transition duration-200 hover:text-blue-500"
             >
               {icon}
               <span className="ml-1">{label}</span>
@@ -61,12 +62,12 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation Links */}
-      <nav className={`md:hidden flex flex-col items-start justify-start text-lg ${isOpen ? 'block' : 'hidden'} bg-white shadow-md`}>
+      <nav className={`md:hidden flex flex-col items-start justify-start text-lg  bg-white dark:bg-gray-800 ${isOpen ? 'block' : 'hidden'} shadow-md`}>
         {NAV_ITEMS.map(({ href, label, icon }) => (
           <a 
             key={label} 
             href={href} 
-            className="flex items-center p-4 text-gray-700 transition duration-200 hover:text-blue-500"
+            className="flex items-center p-4 text-gray-700 dark:text-gray-300 transition duration-200 hover:text-blue-500"
             onClick={() => setIsOpen(false)} // Close menu on link click
           >
             {icon}
