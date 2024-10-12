@@ -33,7 +33,7 @@ const Navbar = () => {
         {/* Logo Section (visible on large screens) */}
         <div className="hidden md:flex items-center">
           <Image 
-            src="/r.png" // Replace with your logo path
+            src="/img.jpeg" // Replace with your logo path
             alt="Refer Earn Logo" 
             height={40}
             width={40}

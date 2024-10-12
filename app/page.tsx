@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className="flex flex-col items-center bg-gray-50">
         {/* Hero Section */}
-        <section className="w-full bg-white text-black py-20"> {/* Changed to gray-100 */}
+        <section className="w-full bg-white text-black py-5"> {/* Changed to gray-100 */}
           <Hero />
         </section>
 

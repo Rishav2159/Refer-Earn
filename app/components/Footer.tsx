@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           href="#"
         >
           <Image
-          src={"/r.png"}
+          src={"/img.jpeg"}
           width={100}
           height={100}
           alt=""
