@@ -79,7 +79,7 @@ const SignUpSection: React.FC = () => {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray700 py2 px3 leading8 transition-colors duration=200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 required
               />
             </div>
@@ -91,33 +91,33 @@ const SignUpSection: React.FC = () => {
                 name="phone-number"
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className="w-full bg-white rounded border border-gray300 focus:border-blue500 focus:ring2 focus:ring-blue200 text-base outline-none text-gray700 py2 px3 leading8 transition-colors duration=200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
             </div>
             <div className="relative mb-4">
-              <label htmlFor="password" className="leading-7 text-sm text-gray600">Password</label>
+              <label htmlFor="password" className="leading-7 text-sm text-gray-600">Password</label>
               <input
                 type="password"
                 id="password"
                 name="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-white rounded border border-gray300 focus:border-blue500 focus:ring2 focus:ring-blue200 text-base outline-none text-gray700 py2 px3 leading8 transition-colors duration=200 ease-in-out"
+                className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 required
               />
             </div>
             <button
               type="submit"
-              className="text-white bg-blue500 border0 py2 px8 focus:outline-none hover:bg-blue600 rounded text-lg"
+              className="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg"
             >
               Sign Up
             </button>
           </form>
 
           {/* Already have an account link */}
-          <p className="text-md text-gray500 mt3">
+          <p className="text-md text-gray-500 mt-3">
             Already have an account? 
-            <a href="/login" className="text-indigo500 ml1">Login</a>
+            <a href="/login" className="text-indigo-500 ml-1">Login</a>
           </p>
         </div>
       </div>
